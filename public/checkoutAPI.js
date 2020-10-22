@@ -40,13 +40,13 @@ function fectchSessionInfo() {
             "apiOperation": "CREATE_CHECKOUT_SESSION",
             "interaction": {
                 "operation": "PURCHASE",
-                "returnUrl": "http://localhost:3000/receipt"
+                "returnUrl": "https://pavanmurapala.github.io/checkout/receipt"
             },
             "order": {
                 "amount": "120.0",
                 "currency": "USD",
                 "description": "Ordered goods",
-                "id": "232E32393d12"
+                "id": new Date().getTime()
             }
         },
             {
