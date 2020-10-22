@@ -29,17 +29,8 @@ function App() {
   const byNow = async (e) => {
     e.preventDefault();
 
-    session = await fectchSessionInfo()
-    /*  session = setSession({
-       "merchant": "TESTMETLIFENI01",
-       "result": "SUCCESS",
-       "session": {
-         "id": "SESSION0002849411191K3702312H28",
-         "updateStatus": "SUCCESS",
-         "version": "56ddf2a301"
-       },
-       "successIndicator": "33e4beca4b01436b"
-     }) */
+    session = await fectchSessionInfo();
+    setSession(session.data);
   }
   return (
     <div className="App">
@@ -66,7 +57,7 @@ function App() {
 
 
                   <FormGroup row>
-                    <Label for="exampleEmail" sm={4}>Email</Label>
+                    <Label for="exampleEmail" sm={4}>Name</Label>
                     <Col sm={8}>
                       <Input type="text" name="name" id="name" placeholder="Enter Name" />
                     </Col>
