@@ -16,7 +16,15 @@ function configureCheckout(sessionID, address, type) {
         },
         interaction: {
             merchant: address
-        }
+        },
+        /*  locale: 'en_US', 
+        theme: 'default',
+        displayControl: {
+            billingAddress: 'OPTIONAL',
+            customerEmail: 'OPTIONAL',
+            orderSummary: 'SHOW',
+            shipping: 'HIDE'
+        }*/
     });
 
     if (type == "lightBox")
