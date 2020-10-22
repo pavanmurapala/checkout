@@ -17,7 +17,7 @@ function App() {
         <Route path="/receipt">
           <Receipt />
         </Route>
-        <Route path="/home">
+        <Route path="/">
           <Home />
         </Route>
       </Switch>
