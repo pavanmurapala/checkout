@@ -16,6 +16,9 @@
   padding:10px 20px;
   margin-right: 10px;
 }
+.centerAlign{
+  margin: 7% auto;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

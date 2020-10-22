@@ -13,6 +13,10 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <script src="https://ap-gateway.mastercard.com/checkout/version/57/checkout.js" data-error="errorCallback"
+    data-cancel="cancelCallback"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js" type='text/javascript'></script>
+  <script src="checkoutAPI.js" type='text/javascript'></script>
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -27,10 +31,7 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <script src="https://ap-gateway.mastercard.com/checkout/version/57/checkout.js" data-complete="paymentSuccess"
-    data-error="errorCallback" data-cancel="cancelCallback"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="checkoutSample.js"></script>
+
   <div id="root"></div>
   <!--
       This HTML file is a template.
