@@ -1,5 +1,3 @@
-
-
 function errorCallback(error) {
     console.log(JSON.stringify(error));
 }
@@ -7,24 +5,29 @@ function cancelCallback() {
     console.log('Payment cancelled');
 }
 function paymentSuccess() {
-    alert("Payment is successfull")
+    console.log("Payment is successfull")
 }
-function configureCheckout(sessionID, address, type) {
+function configureCheckout(sessionID, type) {
     Checkout.configure({
         session: {
             id: sessionID
         },
         interaction: {
-            merchant: address
+            merchant: {
+                name: 'Metlife Store',
+                address: {
+                    line1: '200 Sample St',
+                    line2: '1234 Example Town'
+                }
+            },
+            theme: 'default',
+            displayControl: {
+                billingAddress: 'OPTIONAL',
+                orderSummary: 'SHOW',
+                shipping: 'HIDE'
+            }
         },
-        /*  locale: 'en_US', 
-        theme: 'default',
-        displayControl: {
-            billingAddress: 'OPTIONAL',
-            customerEmail: 'OPTIONAL',
-            orderSummary: 'SHOW',
-            shipping: 'HIDE'
-        }*/
+
     });
 
     if (type == "lightBox")
@@ -36,13 +39,14 @@ function fectchSessionInfo() {
         axios.post('https://ap-gateway.mastercard.com/api/rest/version/57/merchant/TESTMETLIFENI01/session', {
             "apiOperation": "CREATE_CHECKOUT_SESSION",
             "interaction": {
-                "operation": "PURCHASE"
+                "operation": "PURCHASE",
+                "returnUrl": "http://localhost:3000/receipt"
             },
             "order": {
                 "amount": "120.0",
                 "currency": "USD",
                 "description": "Ordered goods",
-                "id": "232E32323ddd"
+                "id": "232E32393d12"
             }
         },
             {
@@ -60,4 +64,4 @@ function fectchSessionInfo() {
     })
 }
 
-//window.addEventListener('load', configureCheckout)
+
