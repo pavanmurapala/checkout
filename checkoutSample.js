@@ -30,7 +30,7 @@ async function fectchSessionInfo() {
     axios.post('https://ap-gateway.mastercard.com/api/rest/version/57/merchant/TESTMETLIFENI01/session', {
         "apiOperation": "CREATE_CHECKOUT_SESSION",
         "interaction": {
-            "operation": "PURCHASE"
+            "operation": "AUTHORIZE"
         },
         "order": {
             "amount": "120.0",
