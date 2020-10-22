@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.shirtImg{
+  width: 100%;
+  height: 300px;
+}
+.checkout{
+  text-align: left;
+  font-size: 40px;
+  margin-bottom: 37px;
+  padding: 18px 0px;
+}
+.buy{ background: #FFF;}
+.buy input {     border: 1px solid #000;
+  margin-left: 14px;
+  margin-right: 14px;
+  width: 70%;
+  margin-bottom: 10px;}
+.buy p{
+  display: inline;
+    color: #212529;
+    padding: 20px;
+}
